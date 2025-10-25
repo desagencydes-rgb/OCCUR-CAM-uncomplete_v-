@@ -341,7 +341,9 @@ Check logs in `logs/occur_cam.log` for detailed information.
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is copyright licensed. All rights are reserved.
+For any **requirements** or **requests**
+contact the email : **desagencydes@gmail.com**
 
 ## 🤝 Contributing
 
@@ -372,4 +374,5 @@ For support and questions:
 
 **OCCUR-CAM** - Reliable face recognition authentication for industrial environments.
 All rights are reserved.
+
 
