@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OCCUR-CAM — Project Index</title>
+  <style>
+    /* 1. Global & Typography */
+    :root {
+      --primary-color: #007bff; /* A clean, action-oriented blue */
+      --text-color: #212529;
+      --light-gray: #f8f9fa;
+      --border-color: #e9ecef;
+      --card-bg: #ffffff;
+    }
+    body {
+      font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      background-color: var(--light-gray);
+      color: var(--text-color);
+    }
+    header {
+      padding-bottom: 16px;
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 12px;
+      border-bottom: 2px solid var(--border-color); /* Subtle divider */
+      padding-bottom: 6px;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #0056b3;
+    }
+
+    /* 2. Layout & Components */
+    .container {
+        max-width: 1200px; /* Constrain width for readability */
+        margin: 0 auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr; /* Slightly wider main column */
+      gap: 30px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Subtle lift */
+      margin-bottom: 20px;
+    }
+    .diagram {
+      background: #fdfdfd;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #dee2e6;
+      margin-bottom: 20px;
+      text-align: center; /* Center the SVG */
+    }
+
+    /* 3. List Styles */
+    ul.files {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul.files li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    ul.files li:last-child {
+      border-bottom: none;
+    }
+    ul.files li a {
+        font-weight: 500; /* Highlight the link */
+    }
+    
+    /* 4. Utility */
+    .legend {
+      font-size: 14px;
+      color: #6c757d;
+      margin-top: 4px;
+    }
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      color: #6c757d;
+      font-size: 13px;
+    }
+    
+    /* SVG Refinements for clarity */
+    .lbl {
+        font: 12px/1.2 Segoe UI,Arial;
+        fill: var(--text-color);
+    }
+    .api-box { stroke: #ff9933; fill: #fff7ed; } /* Orange/API */
+    .client-box { stroke: #66b3ff; fill: #f0f7ff; } /* Blue/Client */
+    .core-box { stroke: #ced4da; fill: #ffffff; } /* Neutral/Core */
+    .db-box { stroke: #a7e999; fill: #f3fff2; } /* Green/Data */
+    .ex-box { stroke: #ffccd9; fill: #fff0f5; } /* Pink/Examples */
+    .arrow-color { stroke: #6c757d; fill: #6c757d; } /* Darker arrow */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>OCCUR-CAM — Visual Project Index</h1>
+      <p class="legend">This HTML index is documentation-only and links into repository docs. It provides a high-level visual map and quick links to important files. 🗺️</p>
+    </header>
+
+    <div class="grid">
+      <div>
+        <div class="card">
+          <h2>Quick Links: Documentation Index</h2>
+          <ul class="files">
+            <li><a href="/README.md"><strong>README.md</strong></a> — Top-level project overview and quickstart</li>
+            <li><a href="/docs/INSTALLATION.md">docs/INSTALLATION.md</a> — Install, build tools and GPU notes</li>
+            <li><a href="/docs/ARCHITECTURE.md">docs/ARCHITECTURE.md</a> — Architecture and component responsibilities</li>
+            <li><a href="/docs/API_DOCUMENTATION.md">docs/API_DOCUMENTATION.md</a> — API & codebase map</li>
+            <li><a href="/docs/TESTS_AND_MODELS.md">docs/TESTS_AND_MODELS.md</a> — Tests, modelization & diagrams</li>
+            <li><a href="/docs/RISKS_AND_RECOMMENDATIONS.md">docs/RISKS_AND_RECOMMENDATIONS.md</a> — Risks, smells and guidance</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Key Folders & Purpose</h2>
+          <ul>
+            <li><strong>api/</strong> — HTTP API endpoints, authentication, camera control.</li>
+            <li><strong>core/</strong> — Recognition engines, camera management, detectors.</li>
+            <li><strong>config/</strong> — Camera settings, application settings, and database helpers.</li>
+            <li><strong>examples/</strong> — Demonstration and test scripts.</li>
+            <li><strong>face-service/</strong> — Packaged application files and pyproject for service deployment.</li>
+            <li><strong>docs/</strong> — This generated HTML and supporting documentation.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Getting Started (3 Steps)</h2>
+          <ol>
+            <li>Open `README.md` for **quickstart** and prerequisites.</li>
+            <li>Open `docs/INSTALLATION.md` for build-tool steps (Windows: Visual C++ Build Tools required).</li>
+            <li>Use the architecture diagram on the right to orient yourself to **runtime flows**.</li>
+          </ol>
+        </div>
+      </div>
+
+      <aside>
+        <div class="diagram">
+          <h3>Architecture Diagram (Simple View)</h3>
+          <svg width="320" height="260" viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <style>.lbl{font:12px/1.2 Segoe UI,Arial;fill:#212529}</style>
+              <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                <path d="M0,0 L10,5 L0,10 z" fill="#6c757d" />
+              </marker>
+            </defs>
+            <rect x="12" y="12" width="296" height="236" rx="8" fill="#fdfdfd" stroke="#e9ecef"/>
+            <rect x="20" y="30" width="126" height="44" rx="6" class="client-box"/>
+            <text x="26" y="56" class="lbl">Client / Dashboard</text>
+
+            <rect x="174" y="30" width="126" height="44" rx="6" class="api-box"/>
+            <text x="180" y="56" class="lbl">API layer (api/)</text>
+
+            <rect x="20" y="88" width="280" height="56" rx="6" class="core-box"/>
+            <text x="28" y="110" class="lbl">Camera Manager / Capture (core/camera*)</text>
+            <text x="28" y="126" class="lbl">Detector → Recognizer (core/face_*)</text>
+
+            <rect x="20" y="156" width="126" height="42" rx="6" class="db-box"/>
+            <text x="28" y="181" class="lbl">Models / DB (database/ & models/)</text>
+
+            <rect x="174" y="156" width="126" height="42" rx="6" class="ex-box"/>
+            <text x="182" y="181" class="lbl">Examples & Services</text>
+
+            <line x1="146" y1="52" x2="174" y2="52" stroke-width="1.5" marker-end="url(#arrow)" class="arrow-color"/>
+            <line x1="160" y1="110" x2="160" y2="156" stroke-width="1.2" marker-end="url(#arrow)" class="arrow-color"/>
+          </svg>
+          <p style="margin-top:10px;font-size:14px;color:#555">**Core Flow:** Client → API → Camera capture → Detector → Recognizer → Database</p>
+        </div>
+
+        <div class="card">
+          <h3>Notes & Future Work</h3>
+          <ul>
+            <li>Index is static HTML for review and sharing.</li>
+            <li>To render locally, open this file in a browser (no server required).</li>
+            <li>For generated interactive docs, consider **mkdocs** or **Sphinx** (future work).</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <strong>Generated:</strong> project index. This file was added as part of a documentation audit — no code files changed.
+    </footer>
+  </div>
+</body>
+</html>
