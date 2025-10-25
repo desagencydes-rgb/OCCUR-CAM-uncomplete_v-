@@ -1,0 +1,42 @@
+# OCCUR-CAM AI Authentication System Dependencies
+
+# Core AI and Face Recognition
+insightface==0.7.3
+onnxruntime==1.16.3
+torch==2.1.0
+torchvision==0.16.0
+
+# Computer Vision
+opencv-python==4.8.1.78
+Pillow==10.1.0
+numpy==1.24.3
+
+# Database
+SQLAlchemy==2.0.23
+alembic==1.13.0
+
+# Configuration and Environment
+PyYAML==6.0.1
+python-dotenv==1.0.0
+
+# Logging
+loguru==0.7.2
+
+# Terminal Interface
+click==8.1.7
+rich==13.7.0
+colorama==0.4.6
+
+# Utilities
+psutil==5.9.6
+schedule==1.2.0
+
+# Data Export
+pandas>=1.5.0
+openpyxl>=3.0.0
+
+# Development and Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+black==23.11.0
+flake8==6.1.0

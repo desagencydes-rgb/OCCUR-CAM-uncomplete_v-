@@ -1,0 +1,57 @@
+# Combined requirements for OCCUR-CAM
+# This file aggregates the project's primary runtime dependencies.
+# NOTE: face-service provides separate CPU/GPU requirement options (see docs/ENV_SETUP.md).
+# Be careful: some packages appear with different version constraints in subprojects. Pick matching versions if you get conflicts.
+
+# Core AI and Face Recognition
+# insightface requires a compatible onnxruntime; prefer a recent stable onnxruntime
+# Use >=1.18.0 for better compatibility with current toolchain (adjust for GPU builds if needed)
+insightface==0.7.3
+onnxruntime>=1.18.0
+# If you plan to use GPU runtime for onnxruntime, replace the above with: onnxruntime-gpu>=1.18.0
+torch==2.1.0
+torchvision==0.16.0
+
+# Computer Vision
+opencv-python==4.8.1.78
+Pillow==10.1.0
+numpy==1.24.3
+
+# Database
+SQLAlchemy==2.0.23
+alembic==1.13.0
+
+# Configuration and Environment
+PyYAML==6.0.1
+python-dotenv==1.0.0
+
+# Logging
+loguru==0.7.2
+
+# Terminal Interface
+click==8.1.7
+rich==13.7.0
+colorama==0.4.6
+
+# Utilities
+psutil==5.9.6
+schedule==1.2.0
+
+# Data Export
+pandas>=1.5.0
+openpyxl>=3.0.0
+
+# Web / microservice (face-service - CPU version)
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+opencv-python-headless>=4.10.0.84
+# onnxruntime already specified above (keep single canonical spec to avoid resolver conflicts)
+python-multipart>=0.0.9
+
+# Development / Testing (optional - move to requirements-dev.txt if preferred)
+pytest==7.4.3
+pytest-cov==4.1.0
+black==23.11.0
+flake8==6.1.0
+
+# End of file

@@ -1,0 +1,7 @@
+# System monitoring dependencies
+psutil>=5.9.0  # System and process monitoring
+numpy>=1.24.0  # Array operations for frame analysis
+opencv-python>=4.8.0  # Camera frame processing and analysis
+windows-curses>=2.3.1; sys_platform == 'win32'  # Terminal UI for Windows
+typing-extensions>=4.7.0  # Type hints support
+python-dateutil>=2.8.2  # Date/time utilities

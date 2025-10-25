@@ -1,0 +1,4 @@
+typing
+pathlib
+virtualenv>=20.24.5
+python-dotenv>=1.0.0
