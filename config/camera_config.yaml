@@ -1,0 +1,98 @@
+# OCCUR-CAM Camera Configuration
+# This file defines camera sources and their settings
+
+# Default camera settings
+default:
+  width: 640
+  height: 480
+  fps: 30
+  timeout: 5
+  enabled: true
+
+# Camera sources configuration
+cameras:
+  # USB Camera (default)
+  usb_0:
+    name: "USB Camera 0"
+    source: 0
+    type: "usb"
+    enabled: true
+    width: 640
+    height: 480
+    fps: 30
+    timeout: 5
+    location: "Main Entrance"
+    description: "Primary USB camera for main entrance"
+    
+  # IVCam integration
+  ivcam:
+    name: "IVCam Mobile"
+    source: "http://192.168.1.100:8080/video"
+    type: "ivcam"
+    enabled: true
+    width: 640
+    height: 480
+    fps: 30
+    timeout: 10
+    location: "Mobile Device"
+    description: "IVCam mobile app camera feed"
+    ip: "192.168.1.100"
+    port: 8080
+    
+  # IP Camera example
+  ip_camera_1:
+    name: "IP Camera 1"
+    source: "rtsp://admin:password@192.168.1.101:554/stream1"
+    type: "rtsp"
+    enabled: false
+    width: 1280
+    height: 720
+    fps: 25
+    timeout: 10
+    location: "Secondary Entrance"
+    description: "RTSP IP camera for secondary entrance"
+    username: "admin"
+    password: "password"
+    
+  # Additional USB camera
+  usb_1:
+    name: "USB Camera 1"
+    source: 1
+    type: "usb"
+    enabled: false
+    width: 640
+    height: 480
+    fps: 30
+    timeout: 5
+    location: "Back Entrance"
+    description: "Secondary USB camera for back entrance"
+
+# Camera groups for different locations
+groups:
+  main_entrance:
+    - usb_0
+    - ivcam
+    
+  secondary_entrance:
+    - ip_camera_1
+    - usb_1
+    
+  all_cameras:
+    - usb_0
+    - ivcam
+    - ip_camera_1
+    - usb_1
+
+# Health monitoring settings
+health_monitoring:
+  check_interval: 30  # seconds
+  max_retry_attempts: 3
+  retry_delay: 5  # seconds
+  offline_threshold: 60  # seconds before marking as offline
+  
+# Performance settings
+performance:
+  max_concurrent_streams: 4
+  frame_buffer_size: 10
+  processing_queue_size: 100
+  auto_restart_failed_cameras: true
