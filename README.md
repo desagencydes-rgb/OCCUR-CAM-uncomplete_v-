@@ -91,7 +91,7 @@ A robust, enterprise-grade face recognition authentication system designed for i
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/desagencydes-rgb/OCCUR-CAM-uncomplete_v-
    cd OCCUR-CAM
    ```
 
@@ -372,3 +372,4 @@ For support and questions:
 
 **OCCUR-CAM** - Reliable face recognition authentication for industrial environments.
 All rights are reserved.
+
