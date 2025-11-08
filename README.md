@@ -92,7 +92,7 @@ A robust, enterprise-grade face recognition authentication system designed for i
 1. **Clone the repository**
    ```bash
    git clone https://github.com/desagencydes-rgb/OCCUR-CAM-uncomplete_v-
-   cd OCCUR-CAM
+   cd OCCUR-CAM-uncomplete_v-
    ```
 
 2. **Install dependencies**
@@ -108,6 +108,11 @@ A robust, enterprise-grade face recognition authentication system designed for i
 4. **Start the application**
    ```bash
    python main.py
+   ```
+
+5. **If you want to start the system from the GUI Dashboard**
+   ```bash
+   python dashboard.py
    ```
 
 ### Advanced Setup
@@ -146,6 +151,9 @@ python main.py --debug
 
 # Setup system only
 python main.py --setup
+
+#Access the Dashboard
+python dashboard.py
 ```
 
 ### Terminal Interface
@@ -359,6 +367,7 @@ For support and questions:
 - Check the troubleshooting section
 - Review the test suite for examples
 - Open an issue on GitHub
+- Contact : desagencydes@gmail.com
 
 ## 🔄 Updates
 
