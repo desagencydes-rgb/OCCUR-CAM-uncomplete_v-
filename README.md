@@ -4,7 +4,7 @@
 ![InsightFace](https://img.shields.io/badge/InsightFace-ResNet50-green?style=for-the-badge&logo=opencv)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-orange?style=for-the-badge)
 
-**Accurency** (formerly OCCUR-CAM) is a robust, enterprise-grade face recognition system designed for industrial environments. Unlike standard implementations, it utilizes a strictly typed, CPU-optimized architecture capable of handling multi-camera streams in varying lighting conditions without GPU dependencies.
+**Accurency** is a robust, enterprise-grade face recognition system designed for industrial environments. Unlike standard implementations, it utilizes a strictly typed, CPU-optimized architecture capable of handling multi-camera streams in varying lighting conditions without GPU dependencies.
 
 ---
 
@@ -30,6 +30,7 @@ The system implements a modular design pattern to decouple detection logic from 
 | **Lighting Optimizer** | Real-time image enhancement pipeline using LBP/HOG features. |
 
 ### Performance Benchmarks (Intel i5-8400 / CPU Only)
+
 * **Face Detection:** ~200ms
 * **Vector Recognition:** ~300ms
 * **Total Latency:** ~500ms/frame
@@ -40,6 +41,7 @@ The system implements a modular design pattern to decouple detection logic from 
 ## 🛠 Installation
 
 ### Prerequisites
+
 * Python 3.11+
 * CPU with AVX support (Standard on most modern processors)
 * 4GB RAM minimum
@@ -48,7 +50,7 @@ The system implements a modular design pattern to decouple detection logic from 
 
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/desagencydes-rgb/Accurency-Biometric-Security.git](https://github.com/desagencydes-rgb/Accurency-Biometric-Security.git)
+git clone https://github.com/desagencydes-rgb/Accurency-Biometric-Security.git
 cd Accurency-Biometric-Security
 
 # 2. Install dependencies (CPU Optimized)
@@ -59,29 +61,39 @@ python scripts/setup.py
 
 # 4. Run the System
 python main.py
-📖 Usage
-Running the Dashboard (GUI)
+```
+
+---
+
+## 📖 Usage
+
+### Running the Dashboard (GUI)
+
 For security desk monitoring:
 
-Bash
-
+```bash
 python dashboard.py
-Running Headless (Server Mode)
+```
+
+### Running Headless (Server Mode)
+
 For deployment on edge devices or servers:
 
-Bash
-
+```bash
 python main.py --camera 1 --debug
-Terminal Commands (CLI)
-c - Show Camera Telemetry
+```
 
-a - Live Authentication Logs
+### Terminal Commands (CLI)
 
-s - System Health Status
+* `c` - Show Camera Telemetry
+* `a` - Live Authentication Logs
+* `s` - System Health Status
 
-📂 Project Structure
-Plaintext
+---
 
+## 📂 Project Structure
+
+```plaintext
 Accurency/
 ├── core/
 │   ├── face_engine.py      # Detection & Recognition Logic
@@ -92,26 +104,41 @@ Accurency/
 ├── database/               # SQLite/SQLAlchemy Schemas
 ├── dashboard.py            # Tkinter GUI Entry Point
 └── main.py                 # CLI Application Entry Point
-⚙️ Configuration
-Edit config/camera_config.yaml to define your video sources:
+```
 
-YAML
+---
 
+## ⚙️ Configuration
+
+Edit `config/camera_config.yaml` to define your video sources:
+
+```yaml
 cameras:
   entrance_cam:
     source: "rtsp://192.168.1.55:554/stream1"
     type: "ip"
     location: "North Gate"
     fps: 15
-🧪 Testing
+```
+
+---
+
+## 🧪 Testing
+
 The repository includes a comprehensive test suite covering unit logic and integration benchmarks.
 
-Bash
-
+```bash
 # Run full test suite
 python -m tests
 
 # Run specific subsystem tests
 python tests/test_face_recognition.py
-📄 License
-Proprietary Software. Developed by D.E.S Agency R&D. All rights reserved. For licensing inquiries, contact: desagencydes@gmail.com
+```
+
+---
+
+## 📄 License
+
+Proprietary Software. Developed by D.E.S Agency R&D. All rights reserved.
+
+For licensing inquiries, contact: desagencydes@gmail.com
