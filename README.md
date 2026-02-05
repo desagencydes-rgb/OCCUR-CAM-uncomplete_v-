@@ -6,8 +6,9 @@
 
 **Accurency** is a robust, enterprise-grade face recognition system designed for industrial environments. Unlike standard implementations, it utilizes a strictly typed, CPU-optimized architecture capable of handling multi-camera streams in varying lighting conditions without GPU dependencies.
 
-<img width="203" height="183" alt="Screenshot 2026-02-05 132040" src="https://github.com/user-attachments/assets/fffe7118-99d8-406d-a77d-0ff86f42e491" />
-
+<p align="center">
+  <img width="203" height="183" alt="Screenshot 2026-02-05 132040" src="https://github.com/user-attachments/assets/fffe7118-99d8-406d-a77d-0ff86f42e491" />
+</p>
 
 ---
 
@@ -145,5 +146,6 @@ python tests/test_face_recognition.py
 Proprietary Software. Developed by **D.E.S Agency R&D**. All rights reserved.
 
 For licensing inquiries, contact: desagencydes@gmail.com
+
 
 
