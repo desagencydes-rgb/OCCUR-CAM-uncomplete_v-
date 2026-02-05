@@ -139,6 +139,7 @@ python tests/test_face_recognition.py
 
 ## 📄 License
 
-Proprietary Software. Developed by D.E.S Agency R&D. All rights reserved.
+Proprietary Software. Developed by **D.E.S Agency R&D**. All rights reserved.
 
 For licensing inquiries, contact: desagencydes@gmail.com
+
